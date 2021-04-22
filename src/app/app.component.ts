@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
+import * as moment from 'moment-timezone';
+import 'moment/locale/pt-br';
+
 @Component({
   selector: 'asf-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'asf-weather';
+
+  constructor() {
+    moment.locale('pt-br');
+  }
 }
